@@ -78,13 +78,6 @@ function App() {
 
       );
     }
-    ("button").click(function() {
-      var textbox_Value = ("#textbox").val();
-      var list = [];
-      list.push(textbox_Value);
-      localStorage.setItem("listdata", list);
-  
-      // do not manage using `append` whole html. Manage through list and display as you want
-    });
+    
     
 export default App;
