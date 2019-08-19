@@ -1,13 +1,21 @@
 import React from 'react';
 
-function myFunction(data){
-  localStorage.setItem(data,2);
+
+function myFunction(data, value) {
+  localStorage.setItem(data, value);
 }
 
-export default class App extends React.Component{
-  render(){
-    return (
-    
+export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: ""
+    }
+  }
+
+render(){
+  return (
+
     <div className="TOP">
       <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
         <ul class="navbar-nav">
@@ -69,14 +77,14 @@ export default class App extends React.Component{
           <div class="col-sm-3">
             <h3>Send More Information</h3>
             <label for="usr">Em@il:</label>
-            <input type="text" onChange={e=>{ this.setState({email:e.target.value})}} class="form-control" id="email"></input>
+            <input type="text" onChange={e => { this.setState({ email: e.target.value }) }} class="form-control" id="email"></input>
             <br></br>
-            <button type="button" onPress={()=>myFunction()} type="submit" class="btn btn-dark">Send</button>
+            <button type="button" onPress={myFunction(this.state.email, this.state)} type="submit" class="btn btn-dark">Send</button>
           </div>>
         </div>
-        </div>
       </div>
-      );}
+    </div>
+  );
+}
   }
-    
-    
+
