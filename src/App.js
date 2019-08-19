@@ -1,17 +1,22 @@
 import React from 'react';
 
 
-function myFunction(data, value) {
-  localStorage.setItem(data, value);
-}
-
 export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: ""
+      email: "",
     }
+
+    //this.handleChange = this.handleChange.bind(this);
+    this.handleSave = this.handleSave.bind(this);
   }
+
+  handleSave() {
+    localStorage.setItem('email',this.state.email);
+  }
+
+
 
 render(){
   return (
@@ -79,7 +84,7 @@ render(){
             <label for="usr">Em@il:</label>
             <input type="text" onChange={e => { this.setState({ email: e.target.value }) }} class="form-control" id="email"></input>
             <br></br>
-            <button type="button" onPress={myFunction(this.state.email, this.state)} type="submit" class="btn btn-dark">Send</button>
+            <button type="button" onClick={this.handleSave} type="submit" class="btn btn-dark">Send</button>
           </div>>
         </div>
       </div>
