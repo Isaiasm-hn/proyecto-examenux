@@ -27,22 +27,14 @@ function App() {
           <li class="nav-item">
             <a href="https://www.sportmix.com/" target="_blank" class="btn btn-dark" role="button">SportMix</a>
           </li>
-          
-
         </ul>
       </nav>
-
       <div class="jumbotron text-center">
         <h1>Top Dog Food Of The Market</h1>
       </div>
-
       <div class="container">
         <div class="row">
-          <div class="col-sm-4">
-            <h3>Purina Pro Plan</h3>
-            <img src=" https://www.purina.com/sites/g/files/auxxlc196/files/SPORT_ALS_PERF3020_ChknRc_F_18.png" class="rounded-circle" alt="Cinque Terre" width="209" height="229"></img>
-            <p>Chicken, corn gluten meal, brewers rice, animal fat preserved with mixed-tocopherols, poultry by-product meal (source of glucosamine), whole grain corn, corn germ meal, fish meal (source of glucosamine), animal digest, fish oil, dried egg product, salt, calcium carbonate, potassium chloride, calcium phosphate, Vitamin E supplement, choline chloride, L-Lysine monohydrochloride, L-ascorbyl-2-polyphosphate (source of Vitamin C), zinc sulfate, ferrous sulfate, manganese sulfate, niacin, Vitamin A supplement, calcium pantothenate, thiamine mononitrate, copper sulfate, riboflavin supplement, Vitamin B-12 supplement, pyridoxine hydrochloride, garlic oil, folic acid, Vitamin D-3 supplement, calcium iodate, biotin, menadione sodium bisulfite complex (Vitamin K), sodium selenite.   X-4461</p>
-          </div>
+          
 
           <div class="col-sm-4">
             <h3>Pro Pac</h3>
