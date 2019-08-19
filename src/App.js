@@ -1,9 +1,13 @@
 import React from 'react';
 
+function myFunction(data){
+  localStorage.setItem(data,2);
+}
 
-function App() {
-  return (
-
+export default class App extends React.Component{
+  render(){
+    return (
+    
     <div className="TOP">
       <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
         <ul class="navbar-nav">
@@ -40,7 +44,6 @@ function App() {
             <p>Chicken, corn gluten meal, brewers rice, animal fat preserved with mixed-tocopherols, poultry by-product meal (source of glucosamine), whole grain corn, corn germ meal, fish meal (source of glucosamine), animal digest, fish oil, dried egg product, salt, calcium carbonate, potassium chloride, calcium phosphate, Vitamin E supplement, choline chloride, L-Lysine monohydrochloride, L-ascorbyl-2-polyphosphate (source of Vitamin C), zinc sulfate, ferrous sulfate, manganese sulfate, niacin, Vitamin A supplement, calcium pantothenate, thiamine mononitrate, copper sulfate, riboflavin supplement, Vitamin B-12 supplement, pyridoxine hydrochloride, garlic oil, folic acid, Vitamin D-3 supplement, calcium iodate, biotin, menadione sodium bisulfite complex (Vitamin K), sodium selenite.   X-4461</p>
           </div>
 
-
           <div class="col-sm-4">
             <h3>Pro Pac</h3>
             <img src="https://www.propacultimates.com/wp-content/uploads/2014/06/packaging-web4.png" class="rounded-circle" alt="Cinque Terre" width="209" height="229"></img>
@@ -66,18 +69,14 @@ function App() {
           <div class="col-sm-3">
             <h3>Send More Information</h3>
             <label for="usr">Em@il:</label>
-            <input type="text" class="form-control" id="email"></input>
+            <input type="text" onChange={e=>{ this.setState({email:e.target.value})}} class="form-control" id="email"></input>
             <br></br>
-            <button type="button" type="submit" class="btn btn-dark">Send</button>
+            <button type="button" onPress={()=>myFunction()} type="submit" class="btn btn-dark">Send</button>
           </div>>
         </div>
         </div>
-
       </div>
-
-
-      );
-    }
+      );}
+  }
     
     
-export default App;
